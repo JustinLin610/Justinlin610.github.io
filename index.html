@@ -60,6 +60,7 @@
 							<article id="blog">
 								<h2 class="major">Blog</h2>
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<p><a href="#DLPPT">Introduction to Deep Learning (PPT)</a>.</p>
 								<p><a href="#SVM2">Another Perspective to View SVM (2)</a>.</p>
 								<p><a href="#SVM">Another Perspective to View SVM (1)</a>.</p>
 								
@@ -89,6 +90,11 @@
 								<p>The hinge loss function of SVM is: $$l(f(x^{(n)}), \hat{y}^{(n)})=max(0, 1 - \hat{y}^{(n)}f(x^{(n)}))$$ The derivative of $l(f(x^{(n)}), \hat{y}^{(n)})$ to $w_i$ can be calculated below: $$\frac{\partial{l}}{\partial{w_i}}=\frac{\partial{l}}{\partial{f}}\frac{\partial{f}}{\partial{w_i}}=\begin{cases} -\hat{y}^{(n)}x^{(n)}_i& 1-\hat{y}^{(n)}f(x^{(n)}) > 0 \\ 0& 1-\hat{y}^{(n)}f(x^{(n)}) \le 0 \end{cases}$$ so the gradient of $w_i$ is: $$\nabla{w_i}=\frac{\partial{L}}{\partial{w_i}}=\sum_{n}-\delta(\hat{y}^{(n)}f(x^{(n)})<1)\hat{y}^{(n)}x^{(n)}_{i}$$ and the gradient of the weight vector is: $$\nabla{w}=\frac{\partial{L}}{\partial{w}}=\sum_{n}-\delta(\hat{y}^{(n)}f(x^{(n)})<1)\hat{y}^{(n)}x^{(n)}$$ In the optimization procedure, the weight vector $w$ is optimized in each step in the following way: $$w=w-\eta\nabla{w}$$ If the weight vector reaches its global minimum in $m$ steps, which means the optimal $w^{*}$ is obtained, \nabla{w}=0. Therefore, if $w$ is initialized as $0$, $w^{*}$ can be presented as follows: $$w^{*}=m\cdot(-\eta\nabla{w})=\sum_{n}m\eta\delta(\hat{y}^{(n)}f(x^{(n)})<1)\hat{y}^{(n)}x^{(n)}$$ Now I define a term called $\alpha_{n}$, that: $$\alpha_{n}=m\eta\delta(\hat{y}^{(n)}f(x^{(n)})<1)$$ Then $w^{*}$ can be written as below: $$w^{*}=\sum_{n}\alpha_{n}\hat{y}^{(n)}x^{(n)}$$ This equation is the same of $w^{*}$ in the Lagrange function for solving the dual problem of SVM, and it proves that $w$ is a linear combination of the data points $x$. Here the equation can be further simplified to: $$w=\sum_{n}\alpha_{n}^{*}x^{(n)}=X\alpha^{*}$$ It should be noted that because of $\delta$ in $\alpha^{*}$, the vector $\alpha^{*}$ is sparse. The vectors $x^{(n)}$ with non-zero $\alpha_{n}^{*}$ are the support vectors holding the margin.</p>
 								<p>Back to the affine function $f(x)=w^{T}x$, now it can be changed to: $$f(x)=\alpha^{T}X^{T}x=\sum_{n}\alpha_{n}(x_{n}\cdot{x})$$ Here I define a function called K that: $$K(x_{n}, x)=\sum_{n}x_{n}\cdot{x}$$ so: $$f(x)=\sum_{n}\alpha_{n}K(x_{n}\cdot{x})$$ Function K is called kernel function (here this K function is linear kernel function), which projects the input data from the input space to the feature space, usually of higher dimensions. The calculation of $K(x, z)$ is much simpler than projection function $\phi(x)$. Moreover, the power of kernel function is more than simple calculation. It is able to project the inputs from the inputs space to the space of infinite dimensions. One typical example is the well-known RBF function.</p>
 								<p>In the next passage, I am going to introduce the traditional method to solve the primal problem of SVM, and try my best to interpret Lagrange multiplier, which has puzzled me for a long time, compared with L2 regularization.</p>
+							</article>
+
+							<article id="DLPPT">
+								<h3 class="major">Intro to Deep Learning (PPT)</h3>
+								<p>The following link is my PPT for a lecture in the course Computational Linguistics at Institute of Linguistics and Applied Linguistics, Peking University, which is a simple introduction to deep learning. If you are interested, <a href="DEEP LEARNING.pdf">please click here!</a></p>
 							</article>
 
 						<!-- About -->
