@@ -1179,8 +1179,8 @@
 
 /* Container */
     #container {width: 100%;}
-    #photo {float: left; width: 20%;}
-    #content {float: right; width: 80%;}
+    #photo {float: left; width: 30%;}
+    #content {float: right; width: 70%;}
     #container2{width: 100%}
 
 /* Header */
