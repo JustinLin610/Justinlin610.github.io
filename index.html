@@ -1,439 +1,539 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Justin Lin</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!-- [if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif] -->
-		<script type="text/javascript" async
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-        </script>
-        <script type="text/x-mathjax-config">
-            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-        </script>
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>p{margin: 12px}</style>
-	</head>
-	<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junyang Lin</title>
+    <meta name="description" content="Junyang Lin - AI researcher at Alibaba Group">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <style>
+        :root {
+            --bg-color: #f7f5f0;
+            --text-color: #2d2d2d;
+            --text-muted: #6b6b6b;
+            --accent-color: #3d3d3d;
+            --border-color: #e8e5dc;
+            --card-bg: #ffffff;
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-coffee"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Justin Lin</h1>
-								<p><br>An Enthusiast for NLP and Multimodality.</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">About</a></li>
-								<li><a href="#pub">Pub</a></li>
-								<!-- <li><a href="#blog">Blog</a></li> -->
-								<!-- <li><a href="#cv">Résumé</a></li> -->
-								<li><a href="#contact">Contact</a></li>
-								<!-- <li><a href="#elements">Elements</a></li> -->
-							</ul>
-						</nav>
-					</header>
+        body {
+            font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.65;
+            letter-spacing: 0.2px;
+        }
 
-				<!-- Main -->
-					<div id="main">
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border-color);
+        }
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">About Me</h2>
-									<p style="font-size: 30px; font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif;"><strong>Junyang Lin (Justin) </strong></p>
-									<p>Researcher in DAMO Academy, Alibaba Group</p>
-									<p>
-										<a href="https://scholar.google.com/citations?user=qp6IwtgAAAAJ&hl=zh-CN">Google Scholar</a><br>
-										<a href="https://github.com/JustinLin610">Github</a><br><br>
-									</p>
-									<p style="font-size: 25px"><strong>Intro:</strong></p>
-									<p>I am Junyang (Justin) Lin, a researcher and engineer in the M6 team, Data Analytics and Intelligence Lab, DAMO Academy, Alibaba Group. I have been working on deep learning for NLP and multimodal representation learning. My research focuses are large-scale pretraining and its downstream application. In 2021, I led the project M6 (MultiModality-to-MultiModality Multitask Mega-transformer), which refers to the Chinese Multimodal Pretrainer, and developed the largest pretrained model M6-10T with my teammates. We also developed a large-scale platform of M6 for finetuning and inference, which supports a great numbers of applications and services in Alibaba Group, including AI designer, automatic text generation, cross-modal retrieval, visual grounding, natural language understanding, etc. In 2022, my team proposes OFA, a unified multimodal multitask pretrainer that achieved a series of SOTAs on benchmark datasets, say MSCOCO Image Captioning, VQA, RefCOCO (-/+/g), and I have been in charge of its opensourcing (<a href="https://github.com/OFA-Sys/OFA">OFA</a>) on Github. In the near future, I plan to build an OFA system towards a real unified model for multitasking and multimodality. <br>Before graduation, I had been a member of Language Computing and Machine Learning Group (LANCO), Key Laboratory of Computational Linguistics, supervised by Xu Sun and Qi Su. My research interests are in natural language generation and graph computing. Specifically, I am now focusing on title generation, description generation and knowledge graph. <br></p>
-									<p><br></p>
-									<p style="font-size: 25px"><strong>Research Interests:</strong></p>
-									<p>NLP, Multi-modality, CV. Notably I focus on large-scale pretraining.</p>
-							</article>
+        a:hover {
+            color: var(--text-color);
+            border-bottom: 1px solid var(--text-color);
+        }
 
-							<article id = "pub">
-								<h2 class="major">Academics</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p style="font-size: 25px"><strong>Selected Papers:</strong></p>
-								<p>
-									Junyang Lin, Rui Men, An Yang, Chang Zhou, Ming Ding, Yichang Zhang, Peng Wang, Ang Wang, Le Jiang, Xianyan Jia, Jie Zhang, Jianwei Zhang, Xu Zou, Zhikang Li, Xiaodong Deng, Jie Liu, Jinbao Xue, Huiling Zhou, Jianxin Ma, Jin Yu, Yong Li, Wei Lin, Jingren Zhou, Jie Tang, Hongxia Yang. M6: A Chinese Multimodal Pretrainer. arXiv 2021 (Note that this is an extension of my KDD paper "M6: Multi-Modality-to-Multi-Modality Multitask Mega-transformer for Unified Pretraining") [<a href="https://arxiv.org/abs/2103.00823">Paper</a>]<br><br>
-									Peng Wang, An Yang, Rui Men, Junyang Lin, Shuai Bai, Zhikang Li, Jianxin Ma, Chang Zhou, Jingren Zhou, Hongxia Yang. Unifying Architectures, Tasks, and Modalities Through a Simple Sequence-to-Sequence Learning Framework. arXiv 2022. [<a href="https://arxiv.org/abs/2202.03052">Paper</a>] [<a href="https://github.com/OFA-Sys/OFA">Code</a>]<br><br><br><br>
-									Zixuan Ma, Jiaao He, Jiezhong Qiu, Huanqi Cao, Yuanwei Wang, Zhenbo Sun, Liyan Zheng, Haojie Wang, Shizhi Tang, Tianyu Zheng, Junyang Lin, Guanyu Feng, Zeqiang Huang, Jie Gao, Aohan Zeng, Jianwei Zhang, Runxin Zhong, Tianhui Shi, Sha Liu, Weimin Zheng, Jie Tang, Hongxia Yang, Xin Liu, Jidong Zhai, Wenguang Chen. BaGuaLu: targeting brain scale pretrained models with over 37 million cores. PPoPP 2022. [<a href="https://pacman.cs.tsinghua.edu.cn/~zjd/publication/ppopp22-bagualu/ppopp22-bagualu.pdf">Paper</a>]<br><br>
-									Yu Huang, Junyang Lin, Chang Zhou, Hongxia Yang, Longbo Huang. Modality Competition: What Makes Joint Training of Multi-modal Network Fail in Deep Learning? (Provably). arXiv 2022. [<a href="https://arxiv.org/abs/2203.12221">Paper</a>]<br><br>
-									Junyang Lin, An Yang, Jinze Bai, Chang Zhou, Le Jiang, Xianyan Jia, Ang Wang, Jie Zhang, Yong Li, Wei Lin, Jingren Zhou, Hongxia Yang. M6-10T: A Sharing-Delinking Paradigm for Efficient Multi-Trillion Parameter Pretraining. [<a href="https://arxiv.org/abs/2110.03888">Paper</a>]<br><br>
-									Ming Ding, Zhuoyi Yang, Wenyi Hong, Wendi Zheng, Chang Zhou, Da Yin, Junyang Lin, Xu Zou, Zhou Shao, Hongxia Yang, Jie Tang. CogView: Mastering Text-to-Image Generation via Transformers. NeurIPS 2021 [<a href="https://arxiv.org/pdf/2105.13290.pdf">Paper</a>] [<a href="https://github.com/THUDM/CogView">Code</a>]<br><br>
-									Shuhuai Ren, Junyang Lin, Guangxiang Zhao, Rui Men, An Yang, Jingren Zhou, Xu Sun, Hongxia Yang. Learning Relation Alignment for Calibrated Cross-modal Retrieval. ACL 2021. [<a href="https://arxiv.org/abs/2105.13868">Paper</a>] [<a href="https://github.com/lancopku/IAIS">Code</a>]<br><br>
-									An Yang, Junyang Lin, Rui Men, Chang Zhou, Le Jiang, Xianyan Jia, Ang Wang, Jie Zhang, Jiamang Wang, Yong Li, Di Zhang, Wei Lin, Lin Qu, Jingren Zhou, Hongxia Yang. M6-T: Exploring Sparse Expert Models and Beyond. arXiv 2021. [<a href="https://arxiv.org/abs/2105.15082">Paper</a>]<br><br>
-									Peng Wang, Junyang Lin, An Yang, Chang Zhou, Yichang Zhang, Jingren Zhou, Hongxia Yang. Sketch and Refine: Towards Faithful and Informative Table-to-Text Generation. ACL 2021. [<a href="https://arxiv.org/abs/2105.14778">Paper</a>]<br><br>
-									Jingjing Xu, Liang Zhao, Junyang Lin, Rundong Gao, Xu Sun, Hongxia Yang. KNAS: Green Neural Architecture Search. ICML 2021. [<a href="https://arxiv.org/abs/2111.13293">Paper</a>] [<a href="https://github.com/Jingjing-NLP/KNAS">Code</a>]<br><br>
-									Junyang Lin, Rui Men, An Yang, Chang Zhou, Yichang Zhang, Peng Wang, Jingren Zhou, Jie Tang, Hongxia Yang. M6: Multi-Modality-to-Multi-Modality Multitask Mega-transformer for Unified Pretraining. KDD 2021. [<a href="https://dl.acm.org/doi/10.1145/3447548.3467206">Paper</a>]<br><br>
-									Junyang Lin, An Yang, Yichang Zhang, Jie Liu, Jingren Zhou, Hongxia Yang. InterBERT: Vision-and-Language Interaction for Multi-modal Pretraining. arXiv 2020. [<a href="https://arxiv.org/abs/2003.13198">Paper</a>]<br><br>
-									Qibin Chen, Junyang Lin, Yichang Zhang, Ming Ding, Yukuo Cen, Hongxia Yang, Jie Tang. Towards Knowledge-Based Recommender Dialog System. EMNLP 2019. [<a href="https://arxiv.org/abs/1908.05391">Paper</a>] [<a href="https://github.com/THUDM/KBRD">Code</a>]<br><br>
-									Jingjing Xu, Xu Sun, Zhiyuan Zhang, Guangxiang Zhao, Junyang Lin. Understanding and Improving Layer Normalization. NeurIPS 2019. [<a href="https://arxiv.org/abs/1911.07013">Paper</a>] [<a href="https://github.com/lancopku/AdaNorm">Code</a>]<br><br>
-									Qibin Chen, Junyang Lin, Yichang Zhang, Hongxia Yang, Jingren Zhou, Jie Tang. Towards Knowledge-Based Personalized Product Description Generation in E-commerce. KDD 2019. [<a href="https://arxiv.org/abs/1903.12457">Paper</a>] [<a href="https://github.com/THUDM/KOBE">Code</a>]<br><br>
-									Bingzhen Wei, Mingxuan Wang, Hao Zhou, Junyang Lin, Xu Sun. Imitation Learning for Non-Autoregressive Neural Machine Translation. ACL 2019. [<a href="https://arxiv.org/abs/1906.02041">Paper</a>]<br><br>
-									Guangxiang Zhao, Junyang Lin, Zhiyuan Zhang, Xuancheng Ren, Qi Su, Xu Sun. Explicit Sparse Transformer: Concentrated Attention Through Explicit Selection. arXiv 2019. [<a href="https://arxiv.org/abs/1905.07799?context=cs.LG">Paper</a>] [<a href="https://github.com/lancopku/Explicit-Sparse-Transformer">Code</a>]<br><br>
-									Junyang Lin, Xu Sun, Shuming Ma, Qi Su. Global Encoding for Abstractive Summarization. ACL 2018. [<a href="https://arxiv.org/abs/1805.03989">Paper</a>] [<a href="https://github.com/lancopku/Global-Encoding">Code</a>]<br><br>
-									Junyang Lin, Qi Su, Pengcheng Yang, Shuming Ma, Xu Sun. Semantic-Unit-Based Dilated Convolution for Multi-Label Text Classification. EMNLP 2018. [<a href="https://arxiv.org/abs/1808.08561v2">Paper</a>] [<a href="https://github.com/lancopku/SU4MLC">Code</a>]<br><br>
-									Jingjing Xu, Xuancheng Ren, Junyang Lin, Xu Sun. Diversity-Promoting GAN: A Cross-Entropy Based Generative Adversarial Network for Diversified Text Generation. EMNLP 2018. [<a href=" http://arxiv.org/abs/1802.01345">Paper</a>] [<a href="https://github.com/lancopku/DPGAN">Code</a>]<br><br>
-								</p>
-								<p style="font-size: 25px"><strong>Academic Activities:</strong></p>
-								<p>
-									Reviewer of ICML, NeurIPS, ACL, etc.<br>
-								</p>
-							</article>
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            z-index: 1000;
+        }
 
-						<!-- Work -->
-							<article id="blog">
-								<h2 class="major">Blog</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p><a href="#DLPPT">Introduction to Deep Learning (PPT)</a>.</p>
-<!-- 								<p><a href="#SVM2">Another Perspective to View SVM (2)</a>.</p>
-								<p><a href="#SVM">Another Perspective to View SVM (1)</a>.</p> -->
-								
-							</article>
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-							<article id="SVM">
-								<h3 class="major">Another Perspective to View SVM (1)</h3>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>This is what I can never forget. Nine months ago, my mentor said to me:"Hey, how about building a paraphrasing system for your final project? Well try to do some feature engineering, label your data, and use SVM?" Ooh, maan, I can only write no more than ten lines of code at that time and you told me to build a system with a Support Vector Machine?! Is it a machine that I can afford? Er mar gerd... Back to our topic, since then, I have had a special feeling for SVM and I have always been curious about such black magic. In the following content, I am going to focus on the loss function of SVM and it involves some knowledge about square error and cross entropy.</p>
-								<p>Support Vector Machine has nothing to do with a real machine. It is just a great machine learning algorithm which often has excellent performance in binary classification. Training a SVM model helps us find the best hyperplane (just like a plane in the high dimensional space) to separate the data and classify them to the right categories. Its main difference from perceptron is that it not only separates the data but also maximizes the margin. Here I do not want to discuss about details about functional margin and geometric margin. I try to illustrate it in a more intuitive way. Say, you have a bunch of data, like ten thousand documents with five thousand of positive attitude and another five thousand of negative attitude, and you want to train a model that can classify them. The procedure is relatively simple: you just need to turn the documents into feature vectors with labels, $+1$ for positive and $-1$ for negative. Suppose the data are linear separable, there should be a hyperplane that can best separate them with largest margin. Intuitively, on either side, there should be some vectors that are nearest to the hyperplane, which are support vectors. These vectors are on two hyperplanes that are parallel to the best hyperplane, $H_1$ and $H_2$, and the distance between $H_1$ and $H_2$ is margin. This is not difficult, but the problem is, how can we find such hyperplane? If you find some books to read, you will see a lot about convex quadratic programming using Lagrange function, which is really puzzling. However, I learned a lot from Hung-yi Lee, a professor in NTU, that training SVM can be viewed from another perspective, which I think is much simpler. If you know something about Pegasos, the fact that SVM can be trained with gradient descent may seem obvious to you. In the following parts, I am going to discuss about this issue.</p>
-								<img src="images/SVM.jpg" alt="" />
-								<p> </p>
-								<p>Let's define the functions for linear separable SVM first. We have a bunch of feature vectors \(\mathcal{X} = \{x^{(1)}, x^{(2)}, ..., x^{(n)}\}\), corresponding to the label space \(\mathcal{Y} = \{+1, -1\}\), and now we use an affine function \(f(x) = w^{T}x + b\) to model the data points, and our task is to find the best hyperplane \(w^{*T}x + b^{*} = 0\) to separate them. For a certain data point $x^{(i)}$, if it is correctly classified, \(y^{(i)}f(x^{(i)}) > 0\). This is simple, but adding margin maximization problem to it makes it much more complicated. Instead of discussing about the functional and geometrical margin as well as convex quadratic programming, I would like to talk about the choice of loss function for a linear classifier.</p>
-								<img src="images/loss_function.png" alt="" />
-								<p>(From Hung-yi Lee's PPT in the Lecture 20 of Machine Learning)</p>
-								<p>As is shown in the picture, the x axis represents $y^{(n)}f(x^{(n)})$, while the y axis represents the loss. In fact we have an ideal loss, which is \(l(g(x^{(n)}), y^{(n)}) = \delta(g(x^{(n)}) \neq y^{(n)})\), where \(g(x^{(n)}) = sign(f(x^{(n)}))\). However, it is problematic in application since it is totally not differentiable. Therefore, we need to find some alternatives, including L2 loss, sigmoid square loss, cross entropy loss and hinge loss. First of all, it is impossible to train a linear classifier with L2 loss function (\(l(f(x^{(n)}), y^{(n)}) = (y^{(n)}f(x^{(n)})-1)^2\), see the red curve). We hope that the target $y^{(n)}$ and the output $f(x^{(n)})$ are of the same sign, and we also hope that the larger their product is, the smaller the loss is, so using mean square error here is definitely inapproapriate. Second of all, sigmoid square loss is also not a good choice (\(l(f(x^{(n)}), y^{(n)}) = (\sigma(y^{(n)}f(x^{(n)}))-1)^2\)). If you have ever experienced the problem of vanishing gradient in your training of neural network, you can find that the problem here is similar. If the value $y^{(n)}f(x^{(n)})$ is a large negative number, its derivative is close to $0$, which means the gradient is too small for the loss to move downward. So how about cross entropy loss? I think it is a reasonable choice and its performance may be satisfactory. The loss function is \(l(f(x^{(n)}), y^{(n)}) = log(1 + exp(-y^{(n)}f(x^{(n)}))\). It seems great since it is the upper bound of the ideal loss and it is consistent with the rule "the larger value, the smaller loss". Moreover, when the $y^{(n)}f(x^{(n)})$ is negative, it has large gradient, which encourages the loss to move downward. However, is there even a better loss function? We may find that the problem of this function is that it encourages the value to be as large as possible, but in fact, if the value is larger than a certain number, our requirements are all satisfied and there is no need for it to be even larger. It may be not robust enough and may be influenced by the outliers.</p>
-								<img src="images/hinge_loss.png" alt="" />
-								<p>(From Andrew Zisserman's PPT in the Lecture 2 of Machine Learning)</p>
-								<p>This function is pretty simple: $$l(f(x^{(n)}), y^{(n)}) = max(0, 1 - y^{(n)}f(x^{(n)}))$$ It means that when the value is negative, the loss is large and it encourages the value to become positive. Moreover, being positive is not enough and it should be larger than a certain value, here we set the value $1$. When the value is larger than 1, there is no need to decrease the loss because we now have enough confidence that we have correctly classified the data points, which solves the problem mentioned above. The value $1$ is actually our margin. You can try to prove it from the perspective of functional margin and geometrical margin. Now there is a problem about the value of the margin. The reason why it should be $1$ is that it makes the loss function a tight, or in another word, lowest upper bound of the ideal loss.</p>
-								<p>Now that the problem becomes clear, we can build the final loss function for linear SVM: $$L(f) = \sum_{i=1}^{n}l(f(x^{(i)}), y^{(i)}) + \frac{\lambda}{2}||w||_2^2$$ Well, is it similar to the optimization problem that you are familiar with? $$min\frac{1}{2}||w||_2^2 + C\sum_{i=1}^{n}\xi^{(i)}$$ $$subject \; to \; y^{(i)}f(x^{(i)}) \geq 1 - \xi^{(i)}$$ Here the $\xi^{(i)}$ is our slack variable, which is also our hinge loss function. Wow, it is just like magic!</p>
-								<p>I have to admit that the first time I learned these ideas I jumped off my chair excitedly. Even today I still feel that this perspective is really great for beginners to understand linear SVM. I hope I can share the happiness to you guys. Next time I will try to discuss about kernel tricks in SVM, starting from gradient descent of SVM.</p>
-							</article>
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--text-color);
+            letter-spacing: 0.5px;
+        }
 
-							<article id="SVM2">
-								<h3 class="major">Another Perspective to View SVM (2)</h3>
-								<p>In this part, I am going to prove that $w$ is the linear combination of the inputs $x$. In the last passage, I discussed about the loss function of SVM and showed that it can be trained with gradient descent. Here I would like to present the training steps by calculating the gradients.</p>
-								<p>The hinge loss function of SVM is: $$l(f(x^{(n)}), \hat{y}^{(n)})=max(0, 1 - \hat{y}^{(n)}f(x^{(n)}))$$ The derivative of $l(f(x^{(n)}), \hat{y}^{(n)})$ to $w_i$ can be calculated below: $$\frac{\partial{l}}{\partial{w_i}}=\frac{\partial{l}}{\partial{f}}\frac{\partial{f}}{\partial{w_i}}=\begin{cases} -\hat{y}^{(n)}x^{(n)}_i& 1-\hat{y}^{(n)}f(x^{(n)}) > 0 \\ 0& 1-\hat{y}^{(n)}f(x^{(n)}) \le 0 \end{cases}$$ so the gradient of $w_i$ is: $$\nabla{w_i}=\frac{\partial{L}}{\partial{w_i}}=\sum_{n}-\delta(\hat{y}^{(n)}f(x^{(n)})<1)\hat{y}^{(n)}x^{(n)}_{i}$$ and the gradient of the weight vector is: $$\nabla{w}=\frac{\partial{L}}{\partial{w}}=\sum_{n}-\delta(\hat{y}^{(n)}f(x^{(n)})<1)\hat{y}^{(n)}x^{(n)}$$ In the optimization procedure, the weight vector $w$ is optimized in each step in the following way: $$w=w-\eta\nabla{w}$$ If the weight vector reaches its global minimum in $m$ steps, which means the optimal $w^{*}$ is obtained, \nabla{w}=0. Therefore, if $w$ is initialized as $0$, $w^{*}$ can be presented as follows: $$w^{*}=m\cdot(-\eta\nabla{w})=\sum_{n}m\eta\delta(\hat{y}^{(n)}f(x^{(n)})<1)\hat{y}^{(n)}x^{(n)}$$ Now I define a term called $\alpha_{n}$, that: $$\alpha_{n}=m\eta\delta(\hat{y}^{(n)}f(x^{(n)})<1)$$ Then $w^{*}$ can be written as below: $$w^{*}=\sum_{n}\alpha_{n}\hat{y}^{(n)}x^{(n)}$$ This equation is the same of $w^{*}$ in the Lagrange function for solving the dual problem of SVM, and it proves that $w$ is a linear combination of the data points $x$. Here the equation can be further simplified to: $$w=\sum_{n}\alpha_{n}^{*}x^{(n)}=X\alpha^{*}$$ It should be noted that because of $\delta$ in $\alpha^{*}$, the vector $\alpha^{*}$ is sparse. The vectors $x^{(n)}$ with non-zero $\alpha_{n}^{*}$ are the support vectors holding the margin.</p>
-								<p>Back to the affine function $f(x)=w^{T}x$, now it can be changed to: $$f(x)=\alpha^{T}X^{T}x=\sum_{n}\alpha_{n}(x_{n}\cdot{x})$$ Here I define a function called K that: $$K(x_{n}, x)=\sum_{n}x_{n}\cdot{x}$$ so: $$f(x)=\sum_{n}\alpha_{n}K(x_{n}\cdot{x})$$ Function K is called kernel function (here this K function is linear kernel function), which projects the input data from the input space to the feature space, usually of higher dimensions. The calculation of $K(x, z)$ is much simpler than projection function $\phi(x)$. Moreover, the power of kernel function is more than simple calculation. It is able to project the inputs from the inputs space to the space of infinite dimensions. One typical example is the well-known RBF function.</p>
-								<p>In the next passage, I am going to introduce the traditional method to solve the primal problem of SVM, and try my best to interpret Lagrange multiplier, which has puzzled me for a long time, compared with L2 regularization.</p>
-							</article>
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
 
-							<article id="DLPPT">
-								<h3 class="major">Intro to Deep Learning (PPT)</h3>
-								<p>The following link is my PPT for a lecture in the course Computational Linguistics at our institute, which is a simple introduction to deep learning. If you are interested, <a href="DEEP LEARNING.pdf">please click here!</a></p>
-							</article>
+        .nav-links a {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
 
-						<!-- About -->
-							<article id="cv">
-								<h2 class="major">Résumé</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>To read my résumé, <a href="resume_junyanglin.pdf">please click here!</a></p>
-							</article>
+        .nav-links a:hover {
+            color: var(--text-color);
+        }
 
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-<!-- 								<form method="post" action="#">
-									<div class="field half first">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="special" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form> -->
-								<ul class="icons">
-									<li><a href="http://j.map.baidu.com/2jhxk" class="icon fa-map-marker"><span class="label">Address</span></a></li>
-									<li><a href="mailto:junyang.ljy@alibaba-inc.com" class="icon fa-envelope-square"><span class="label">Email</span></a></li>
-									<li><a href="https://www.linkedin.com/in/%E4%BF%8A%E6%97%B8-%E6%9E%97-0b2b38151/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/JustinLin610" class="icon fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-								<p>Email: junyang.ljy@alibaba-inc.com</p>
-								<p>Address: Jinhui Building, Chaoyang District, Beijing, China</p>
-							</article>
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 7rem 2rem 5rem;
+        }
 
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 3rem 0 4rem;
+        }
 
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>a a</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
+        .hero-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 1px solid #d4d1c8;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+            letter-spacing: 1px;
+        }
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+        .hero .affiliation {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
 
-								<section>
-									<h3 class="major">Lists</h3>
+        .hero .bio {
+            margin-top: 2rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+        /* Section */
+        section {
+            padding: 4rem 0;
+        }
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            letter-spacing: 0.5px;
+        }
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-									</ul>
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+            font-style: italic;
+        }
 
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button special">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions vertical">
-										<li><a href="#" class="button special">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
+        /* Research Interests */
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
 
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
+        .interest-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+        }
 
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
+        .interest-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0.75rem;
+        }
 
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button special">Special</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button special icon fa-download">Icon</a></li>
-										<li><a href="#" class="button icon fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button special disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
+        .interest-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.7;
+        }
 
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="field half first">
-											<label for="demo-name">Name</label>
-											<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-										</div>
-										<div class="field half">
-											<label for="demo-email">Email</label>
-											<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-										</div>
-										<div class="field">
-											<label for="demo-category">Category</label>
-											<div class="select-wrapper">
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-										</div>
-										<div class="field half first">
-											<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-											<label for="demo-priority-low">Low</label>
-										</div>
-										<div class="field half">
-											<input type="radio" id="demo-priority-high" name="demo-priority">
-											<label for="demo-priority-high">High</label>
-										</div>
-										<div class="field half first">
-											<input type="checkbox" id="demo-copy" name="demo-copy">
-											<label for="demo-copy">Email me a copy</label>
-										</div>
-										<div class="field half">
-											<input type="checkbox" id="demo-human" name="demo-human" checked>
-											<label for="demo-human">Not a robot</label>
-										</div>
-										<div class="field">
-											<label for="demo-message">Message</label>
-											<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="special" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
+        /* Publications */
+        .pub-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
 
-							</article>
+        .pub-item {
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border-left: 2px solid var(--accent-color);
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+        }
 
-					</div>
+        .pub-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            color: var(--text-color);
+            line-height: 1.5;
+        }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<!-- <p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p> -->
-						<p class="copyright">&copy; Justin Lin </p>
-					</footer>
+        .pub-authors {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
 
-			</div>
+        .pub-venue {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            font-style: italic;
+        }
 
-		<!-- BG -->
-			<div id="bg"></div>
+        .pub-links {
+            margin-top: 1.2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        .pub-link {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            padding: 0.3rem 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+            text-decoration: none;
+        }
 
-	</body>
+        .pub-link:hover {
+            border-color: var(--text-color);
+            color: var(--text-color);
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            color: var(--text-color);
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .project-tag {
+            background: #f0ece5;
+            color: var(--text-muted);
+            padding: 0.3rem 0.8rem;
+            border-radius: 2px;
+            font-size: 0.8rem;
+        }
+
+        /* Contact */
+        .contact-section {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .contact-email {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+            font-size: 1.3rem;
+            transition: all 0.2s;
+        }
+
+        .social-link:hover {
+            border-color: var(--text-color);
+            color: var(--text-color);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .container {
+                padding: 5rem 1.5rem 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Junyang Lin</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container">
+        <section id="home" class="hero">
+            <img src="images/avatar.jpeg"
+                 alt="Junyang Lin"
+                 class="hero-photo"
+                 onerror="this.src='images/pic02.jpg'">
+            <h1>Junyang Lin</h1>
+            <p class="affiliation">Qwen Team</p>
+        </section>
+
+        <!-- Research Interests -->
+        <section id="research">
+            <h2 class="section-title">Research Interests</h2>
+            <p class="section-subtitle">Areas of current research focus</p>
+
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <h3>Large Language Models</h3>
+                    <p>Scaling laws, architecture design, and efficient training methods for large language models.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>AI Agents</h3>
+                    <p>Autonomous agents capable of multi-step reasoning and tool usage.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Multimodal Learning</h3>
+                    <p>Unified models across text, vision, and other modalities.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Long-Horizon Reasoning</h3>
+                    <p>Enabling models for extended sequential planning and execution.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>World Models</h3>
+                    <p>Unifying vision-based understanding and generation for comprehensive world modeling.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Reinforcement Learning</h3>
+                    <p>Reinforcement learning algorithms co-designed with scalable infrastructure.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications -->
+        <section id="publications">
+            <h2 class="section-title">Selected Publications</h2>
+            <p class="section-subtitle">Selected academic work</p>
+
+            <div class="pub-list">
+                <div class="pub-item">
+                    <div class="pub-title">Qwen3 technical report</div>
+                    <div class="pub-authors">A. Yang, A. Li, B. Yang, B. Zhang, ... <strong>J. Lin</strong>, ...</div>
+                    <div class="pub-venue">arXiv preprint arXiv:2505.09388, 2025</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2505.09388" class="pub-link">arXiv</a>
+                        <a href="https://github.com/QwenLM/Qwen3" class="pub-link">Code</a>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-title">Qwen3-VL technical report</div>
+                    <div class="pub-authors">S. Bai, K. Chen, X. Liu, J. Wang, ... <strong>J. Lin</strong>, ...</div>
+                    <div class="pub-venue">arXiv preprint arXiv:2502.13923, 2025</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2502.13923" class="pub-link">arXiv</a>
+                        <a href="https://github.com/QwenLM/Qwen3-VL" class="pub-link">Code</a>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-title">Qwen3-Coder technical report</div>
+                    <div class="pub-authors">S. Bai, P. Wang, W. Ge, X. Liu, ... <strong>J. Lin</strong>, ...</div>
+                    <div class="pub-venue">arXiv preprint arXiv:2505.01543, 2025</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2505.01543" class="pub-link">arXiv</a>
+                        <a href="https://github.com/QwenLM/Qwen3-Coder" class="pub-link">Code</a>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-title">Group Sequence Policy Optimization</div>
+                    <div class="pub-authors">C. Zheng, S. Liu, M. Li, X. Chen, B. Yu, C. Gao, K. Dang, Y. Liu, R. Men, A. Yang, <strong>J. Lin</strong>, J. Zhou</div>
+                    <div class="pub-venue">arXiv preprint arXiv:2507.18071, 2025</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2507.18071" class="pub-link">arXiv</a>
+                        <a href="https://github.com/QwenLM/GSPO" class="pub-link">Code</a>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-title">Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free</div>
+                    <div class="pub-authors">Z. Qiu, Z. Wang, B. Zheng, Z. Huang, K. Wen, S. Yang, R. Men, L. Yu, F. Huang, S. Huang, D. Liu, J. Zhou, <strong>J. Lin</strong></div>
+                    <div class="pub-venue">NeurIPS 2025</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2505.06708" class="pub-link">arXiv</a>
+                        <a href="https://github.com/qiuzh20/gated_attention" class="pub-link">Code</a>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-title">Qwen-Image technical report</div>
+                    <div class="pub-authors">Y. Chu, Z. Cui, K. Dang, X. Deng, F. Huang, ... <strong>J. Lin</strong>, ...</div>
+                    <div class="pub-venue">arXiv preprint arXiv:2505.10338, 2025</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2505.10338" class="pub-link">arXiv</a>
+                        <a href="https://github.com/QwenLM/Qwen-Image" class="pub-link">Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">Reach out for collaborations or inquiries</p>
+
+            <div class="contact-content">
+                <a href="mailto:justinlin930319@gmail.com" class="contact-email">justinlin930319@gmail.com</a>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">
+                    Alibaba: <a href="mailto:junyang.ljy@alibaba-inc.com">junyang.ljy@alibaba-inc.com</a>
+                </p>
+
+                <div class="social-links">
+                    <a href="https://scholar.google.com/citations?user=qp6IwtgAAAAJ" class="social-link" title="Google Scholar">
+                        <i class="fa fa-graduation-cap"></i>
+                    </a>
+                    <a href="https://github.com/JustinLin610" class="social-link" title="GitHub">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <a href="https://x.com/JustinLin610" class="social-link" title="X">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/%E4%BF%8A%E6%97%B8-%E6%9E%97-0b2b38151/" class="social-link" title="LinkedIn">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Junyang Lin. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
 </html>
